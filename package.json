@@ -2,10 +2,14 @@
   "name": "finalboost",
   "version": "1.0.0",
   "description": "this is going to be my first full stack app",
+  "type": "module",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "author": "gaurav",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.7"
+  }
 }

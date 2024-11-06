@@ -5,11 +5,9 @@ dotenv.config({
     path : './env'
 })
 mongoDB()
-// (async ()=>{
-//     try {
-//         await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
-//     } catch (error) {
-//         console.error("this is your error" ,error)
-//         throw error
-//     }
-// })()
+.then(()=>{
+    application.listen(process.env.PORT || 8000)
+    console.log(`your app is runnig on !! ${process.env.PORT }`)
+}).catch((err)=>{
+    console.log("monoDB has't connected",err)
+})
